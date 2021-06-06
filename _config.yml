@@ -21,7 +21,7 @@
 title: Hangry Hungarian blog
 description: >- # this means to ignore newlines until "baseurl:"
   Mindig éhes, mindig mérges, nagyon magyar.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
@@ -30,7 +30,7 @@ plugins:
 
 collections:
   posts:
-    permalink: "blog/posts/:year/:month/:day/:title/"
+    permalink: "posts/:year/:month/:day/:title/"
     output: true
 defaults:
   - scope:
