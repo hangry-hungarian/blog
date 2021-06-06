@@ -14,7 +14,7 @@
     {% assign category_count = category | last | size | split: '' %}
     {% assign category_values = category_values | concat: category_count %}
 {% endfor %}
-{% assign category_values = category_values | uniq | sort_natural %}
+{% assign category_values = category_values | uniq | sort_natural | reverse %}
 {% assign category_levels = category_values | size %}
 
 Number of categories: {{ num_of_categories }} <br>
