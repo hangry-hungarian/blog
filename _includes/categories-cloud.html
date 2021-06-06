@@ -1,0 +1,43 @@
+
+<h1>Categories Cloud</h1>
+
+{% assign categories = site.categories | sort %}
+{% assign num_of_categories = categories | size %}
+
+{% assign sum_of_categories = 0 %}
+{% assign category_values = '' | split: '' %}
+{% for category in categories %}
+    {% for post in category[1] %}
+        {% assign sum_of_categories = sum_of_categories | plus: 1.0 %}
+    {% endfor %}
+
+    {% assign category_count = category | last | size | split: '' %}
+    {% assign category_values = category_values | concat: category_count %}
+{% endfor %}
+{% assign category_values = category_values | uniq | sort_natural %}
+{% assign category_levels = category_values | size %}
+
+Number of categories: {{ num_of_categories }} <br>
+Sum of categories: {{ sum_of_categories }} <br>
+There is {{ category_levels }} different level of categories. <br>
+
+{% for category in categories %}
+    {% assign category_name = category | first | slugify %}
+    {% assign category_count = category | last | size %}
+
+    {% assign category_level = 9 %}
+    {% assign index = 0 %}
+    {% for item in category_values %}
+        {% if category_level < 10 %}
+            {% assign tmp_value = category_count | minus: item %}
+            {% if tmp_value != 0 %}
+                {% assign index = index | plus: 1 %}
+            {% else %}
+                {% assign category_level = index %}
+            {% endif %}        
+        {% endif %}
+    {% endfor %}
+
+    <a href="#" class="category-cloud level-{{category_level}}">{{category_name}} ({{category_count}})</a>
+
+{% endfor %}

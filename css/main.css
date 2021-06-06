@@ -1,0 +1,12 @@
+.category-cloud {
+    color: lightblue;
+  }
+.category-cloud.level-0 {
+    color: green;
+}
+.category-cloud.level-1 {
+    color: blue;
+}
+.category-cloud.level-2 {
+    color: red;
+}
