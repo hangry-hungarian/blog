@@ -23,7 +23,16 @@ layout: base
             <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
             {%- if forloop.last == false %}, {% endif -%}
         {% endfor %}
-      {%- endif -%}</p>
+      {%- endif -%}
+    </p>
+    <tags>
+      {%- if page.tags -%}
+        {% assign tags = page.tags | sort_natural %}
+        {% for tag in tags %}
+          <span class="badge bg-secondary">{{tag}}</span>            
+        {% endfor %}
+      {%- endif -%}
+    </tags>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
