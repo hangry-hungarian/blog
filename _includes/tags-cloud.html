@@ -1,0 +1,24 @@
+
+<section>
+    {% assign tags = site.tags | sort %}
+    {% for tag in tags %}
+        {% assign tag_name = tag | first | slugify %}
+        {% assign tag_count = tag | last | size %}
+
+        {% assign tag_level = 9 %}
+        {% assign index = 0 %}
+        {% for item in category_values %}
+            {% if tag_level < 10 %}
+                {% assign tmp_value = tag_count | minus: item %}
+                {% if tmp_value != 0 %}
+                    {% assign index = index | plus: 1 %}
+                {% else %}
+                    {% assign tag_level = index %}
+                {% endif %}        
+            {% endif %}
+        {% endfor %}
+
+        <a href="#" class="btn btn-primary level-{{tag_level}}" role="button">{{tag_name}}</a>
+
+    {% endfor %}
+</section>

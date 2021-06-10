@@ -1,6 +1,6 @@
 ---
 title: "Rakott édesburgonya"
-date: 2021-06-07 17:27
+date: 2021-06-10 14:55
 tags: tejföl édesburgonya tojás sajt kolbász
 categories: recept főzés
 author: Viktor
