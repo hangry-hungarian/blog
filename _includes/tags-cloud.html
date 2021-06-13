@@ -1,14 +1,21 @@
 
 <section id="tags-cloud" class="container">
+    {% assign tag_weights = '' | split: '' %}
+    {% for tag in site.tags %}
+        {% assign tag_count = tag | last | size | split: '' %}
+        {% assign tag_weights = tag_weights | concat: tag_count %}
+    {% endfor %}
+    {% assign tag_weights = tag_weights | uniq | sort_natural | reverse %}
+
     {% assign tags = site.tags | sort %}
     {% for tag in tags %}
         {% assign tag_name = tag | first | slugify %}
         {% assign tag_count = tag | last | size %}
 
-        {% assign tag_level = 9 %}
-        {% assign index = 0 %}
-        {% for item in category_values %}
-            {% if tag_level < 10 %}
+        {% assign tag_level = 1 %}
+        {% assign index = 1 %}
+        {% for item in tag_weights %}
+            {% if tag_level < 5 %}
                 {% assign tmp_value = tag_count | minus: item %}
                 {% if tmp_value != 0 %}
                     {% assign index = index | plus: 1 %}
@@ -18,7 +25,7 @@
             {% endif %}
         {% endfor %}
 
-        <a href="#" class="btn btn-primary level-{{tag_level}}" role="button">{{tag_name}}</a>
+        <a href="#" class="btn btn-primary fs-{{tag_level}}" role="button">{{tag_name}}</a>
 
     {% endfor %}
 </section>
