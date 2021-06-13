@@ -4,38 +4,42 @@ layout: base
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header id="post-header" class="container">
-    <img src="{{ site.baseurl }}{{ page.thumbnail }}" alt="thumbnail" class="thumbnail img-fluid">
-    <h1 id="post-title" class="post-title" itemprop="post title headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      <time id="post-date" class="post-date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="post date published">
-        {{ page.date }}
-      </time>
-      {%- if page.author -%}
-      <div id="authors">
-        {% for author in page.author %}
-          <a href="#" class="author btn btn-primary" role="button" itemprop="post author">{{ author }}</a>
-        {% endfor %}
-      </div>        
-      {%- endif -%}
-    </p>
-    {%- if page.categories -%}
-    <div id="categories">
-      {% assign categories = page.categories | sort_natural %}
-      {% for category in categories %}
-        <a href="#" class="category btn btn-primary" role="button" itemprop="post category">{{ category }}</a>
-      {% endfor %}
-    </div>
-    {%- endif -%}
+    <img src="{{ site.baseurl }}{{ page.thumbnail }}" alt="thumbnail" class="thumbnail image">
+    <div class="post-meta">
+      <h1 id="post-title" class="post-title badge fs-1 text-warp" itemprop="post title headline">{{ page.title | escape }}</h1>    
+      <div id="post-data">
+        <time id="post-date" class="post-date badge fs-7" datetime="{{ page.date | date_to_string }}" itemprop="post date published">
+          {{ page.date | date: "%Y. %m. %d." }}
+        </time>
+
+        {%- if page.categories -%}
+          {% assign categories = page.categories %}
+          {% for category in categories %}
+            <a href="#" class="category badge fs-7" role="button" itemprop="post category">{{ category }}</a>
+          {% endfor %}
+        {%- endif -%}
+      </div>
+    </div>    
     
+    {%- if page.author -%}
+    <div id="authors">
+      {% for author in page.author %}
+        <a href="#" class="author btn btn-primary rounded-circle" role="button" itemprop="post author">
+          {{ author | capitalize | split: '' | first }}
+        </a>
+      {% endfor %}
+    </div>        
+    {%- endif -%}
+      
+      
     {%- if page.tags -%}
-    <tags id="tags">
+    <tags id="tags" class="float-end">
       {% assign tags = page.tags | sort_natural %}
       {% for tag in tags %}
-      <a href="#" class="tag badge bg-secondary" itemprop="post tag">{{ tag }}</a>            
+      <a href="#" class="tag btn btn-sm float-end" itemprop="post tag">{{ tag }}</a>            
       {% endfor %}
     </tags>
     {%- endif -%}
-    
   </header>
 
   <div id="content" class="container" itemprop="articleBody">

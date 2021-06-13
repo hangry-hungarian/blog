@@ -2,13 +2,15 @@
 title: "Rakott édesburgonya"
 date: 2021-06-10 14:55
 tags: tejföl édesburgonya tojás sajt kolbász
-categories: recept főzés
+categories: receptek sütés főzés
 author: Viktor
 thumbnail: /assets/posts/2021-06-10-rakott-edesburgonya/final.jpeg
 ---
 Nagyon régen ettem rakott krumplit, így gondoltam csinálok valamikor. De kipróbálom édesburgonyával.
+{: .lead}
 
 Határozottan nem lett rossz, de azért nem olyan mint az eredeti.
+{: .blockquote}
 
 # Hozzávalók
 {: .ingredients}

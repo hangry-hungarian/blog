@@ -2,13 +2,15 @@
 title: "Tejszínes brokkolis kukoricás csirke"
 date: 2021-06-07 17:27
 tags: tejszín brokkoli csirkemell kukorica füstölt-sajt fusilli
-categories: recept főzés
+categories: receptek sütés főzés
 author: Viktor
 thumbnail: /assets/posts/2021-06-07-tejszines-brokkolis-kukoricas-csirke/final.jpeg
 ---
 A hétvégén kértem egy "Füsti" fantázia nevü fogást ami olyan kritikán alulira sikerült, hogy eldöntöttem megpróbálom otthon. Rosszabbul aligha sikerülhet felkiáltással.
+{: .lead}
 
 SPOILER! Elég fasza lett.
+{: .blockquote}
 
 # Hozzávalók
 {: .ingredients}
