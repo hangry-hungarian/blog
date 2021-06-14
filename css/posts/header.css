@@ -1,0 +1,79 @@
+#post-header {
+    position: relative;
+    max-height: 70vh;
+    overflow: hidden;
+}
+
+#post-header .thumbnail.image {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+#post-header .post-meta {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+#post-header .post-title {
+    display: block;
+    position: relative;
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+
+    background-color: black;
+    color: whitesmoke;
+
+    border-radius: unset;
+    box-shadow: 0.25rem 0.25rem 0 0.25rem;
+}
+
+#post-header #post-date {
+    position: relative;
+    margin-left: 2rem;
+    padding: 0.25rem 0.5rem;
+    background-color: black;
+    color: whitesmoke;
+    border-radius: unset;
+    box-shadow: 0.125rem 0.125rem 0 0.125rem;
+}
+
+#post-header .category {
+    position: relative;
+    margin-left: .5rem;
+    padding: 0.25rem 0.5rem;
+    background-color: black;
+    color: whitesmoke;
+    border-radius: unset;
+    text-decoration: none;
+    box-shadow: 0.125rem 0.125rem 0 0.125rem;
+}
+
+#post-header .author {
+    position: absolute;
+    left: 2rem;
+    bottom: 1rem;
+
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;    
+
+    background-image: linear-gradient(135deg, purple, pink);
+    border: none;
+}
+
+#post-header #tags {
+    position: absolute;
+    right: 2rem;
+    bottom: 1rem;
+    max-width: 60%;
+}
+
+#post-header #tags .tag{
+    position: relative;
+    margin: .1rem;
+
+    background-color: black;
+    color: whitesmoke;
+    border-radius: unset;
+}
