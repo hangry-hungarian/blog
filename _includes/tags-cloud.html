@@ -1,5 +1,5 @@
 
-<section id="tags-cloud" class="container">
+<section id="tags-cloud" class="container d-inline-flex justify-content-center flex-wrap">
     {% assign tag_weights = '' | split: '' %}
     {% for tag in site.tags %}
         {% assign tag_count = tag | last | size | split: '' %}
@@ -25,7 +25,7 @@
             {% endif %}
         {% endfor %}
 
-        <a href="#" class="btn btn-primary fs-{{tag_level}}" role="button">{{tag_name}}</a>
+        <a href="#" class="align-self-center fs-{{tag_level}}" role="button">{{tag_name}}</a>
 
     {% endfor %}
 </section>

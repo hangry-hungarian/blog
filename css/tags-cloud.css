@@ -1,0 +1,9 @@
+#tags-cloud a {
+    margin: .5rem;
+    font-family: Pacifico;
+    text-decoration: none;
+}
+
+#tags-cloud .fs-1 {
+    color: brown;
+}

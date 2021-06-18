@@ -2,6 +2,7 @@
     position: relative;
     max-height: 70vh;
     overflow: hidden;
+    font-family: 'Abril Fatface', cursive;
 }
 
 #post-header .thumbnail.image {
@@ -20,7 +21,7 @@
     position: relative;
     padding: 0.5rem 1rem;
     margin-left: 1rem;
-
+    font-family: 'Abril Fatface', cursive;
     background-color: black;
     color: whitesmoke;
 
@@ -57,7 +58,7 @@
     width: 4rem;
     height: 4rem;
     font-size: 2rem;    
-
+    font-family: 'Pacifico', cursive;
     background-image: linear-gradient(135deg, purple, pink);
     border: none;
 }
@@ -67,6 +68,7 @@
     right: 2rem;
     bottom: 1rem;
     max-width: 60%;
+    font-family: Lobster;
 }
 
 #post-header #tags .tag{
