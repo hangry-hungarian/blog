@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+#authors .author.viktor {  
+    font-family: 'Pacifico', cursive;
+    background-image: linear-gradient(135deg, purple, pink);
+    border: none;
+}

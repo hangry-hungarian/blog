@@ -24,7 +24,7 @@ layout: base
     {%- if page.author -%}
     <div id="authors">
       {% for author in page.author %}
-        <a href="#" class="author btn btn-primary rounded-circle" role="button" itemprop="post author">
+        <a href="#" class="author {{ author | downcase }} btn btn-primary rounded-circle" role="button" itemprop="post author">
           {{ author | capitalize | split: '' | first }}
         </a>
       {% endfor %}

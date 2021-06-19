@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Bebas+Neue&family=Lobster&family=Pacifico&display=swap');
 
 @import "posts/header.css";
 @import "posts/content.css";
 
-@import "tags-cloud.css"
+@import "tags-cloud.css";
+@import "author.css";
 

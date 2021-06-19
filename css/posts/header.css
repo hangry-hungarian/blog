@@ -2,7 +2,6 @@
     position: relative;
     max-height: 70vh;
     overflow: hidden;
-    font-family: 'Abril Fatface', cursive;
 }
 
 #post-header .thumbnail.image {
@@ -21,7 +20,6 @@
     position: relative;
     padding: 0.5rem 1rem;
     margin-left: 1rem;
-    font-family: 'Abril Fatface', cursive;
     background-color: black;
     color: whitesmoke;
 
@@ -50,25 +48,11 @@
     box-shadow: 0.125rem 0.125rem 0 0.125rem;
 }
 
-#post-header .author {
-    position: absolute;
-    left: 2rem;
-    bottom: 1rem;
-
-    width: 4rem;
-    height: 4rem;
-    font-size: 2rem;    
-    font-family: 'Pacifico', cursive;
-    background-image: linear-gradient(135deg, purple, pink);
-    border: none;
-}
-
 #post-header #tags {
     position: absolute;
     right: 2rem;
     bottom: 1rem;
     max-width: 60%;
-    font-family: Lobster;
 }
 
 #post-header #tags .tag{
@@ -78,4 +62,14 @@
     background-color: black;
     color: whitesmoke;
     border-radius: unset;
+}
+
+#post-header .author {
+    position: absolute;
+    left: 2rem;
+    bottom: 1rem;
+    --size: 4rem;
+    width: var(--size);
+    height: var(--size);
+    font-size: calc( var(--size) / 2);
 }
